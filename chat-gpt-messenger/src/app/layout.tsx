@@ -5,6 +5,7 @@ import { authOptions } from '@/pages/api/auth/[...nextauth]'
 import Login from '@/components/login'
 import ErrorBoundary from '@/components/error-boundary'
 import './globals.css'
+import ClientProvider from './contexts/client-provider'
 
 export const metadata = {
 	title: 'Create Next App',
@@ -30,7 +31,7 @@ export default async function RootLayout({
 									<div className="bg-[#202123] max-w-xs h-screen overflow-y-scroll-auto md:min-w-[20rem]">
 										<Sidebar />
 									</div>
-									{/* Client provider */}
+									<ClientProvider />
 									<div className='bg-dark flex-1'>{children}</div>
 								</div>
 							)
