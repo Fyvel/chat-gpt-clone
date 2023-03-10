@@ -5,5 +5,26 @@
 	"extends": [
 		"plugin:@next/next/recommended",
 		"plugin:@typescript-eslint/recommended"
-	]
+	],
+	"rules": {
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": "warn",
+		"react/jsx-uses-react": "off",
+		"react/react-in-jsx-scope": "off",
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"never"
+		]
+	}
 }
