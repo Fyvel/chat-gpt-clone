@@ -13,6 +13,7 @@
 		"redhat.vscode-commons",
 		"redhat.vscode-yaml",
 		"eamodio.gitlens",
-		"formulahendry.code-runner"
+		"formulahendry.code-runner",
+		"bradlc.vscode-tailwindcss"
 	]
 }

@@ -1,3 +1,5 @@
+
+import LougOut from './logout'
 import NewChat from './new-chat'
 
 export default function Sidebar() {
@@ -12,6 +14,7 @@ export default function Sidebar() {
 					{/* chatrows */}
 				</div>
 			</div>
+			<LougOut />
 		</div>
 	)
 }
