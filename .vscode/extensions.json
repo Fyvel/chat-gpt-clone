@@ -1,0 +1,18 @@
+{
+	"recommendations": [
+		"github.copilot",
+		"perkovec.emoji",
+		"lacroixdavid1.vscode-format-context-menu",
+		"huizhou.githd",
+		"wix.vscode-import-cost",
+		"oderwat.indent-rainbow",
+		"hoovercj.vscode-power-mode",
+		"sibiraj-s.vscode-scss-formatter",
+		"jock.svg",
+		"redhat.vscode-xml",
+		"redhat.vscode-commons",
+		"redhat.vscode-yaml",
+		"eamodio.gitlens",
+		"formulahendry.code-runner"
+	]
+}
