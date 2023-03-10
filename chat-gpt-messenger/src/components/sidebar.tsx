@@ -1,6 +1,6 @@
-
-import LougOut from './logout'
-import NewChat from './new-chat'
+import ChatList from '@/components/chat-list'
+import LougOut from '@/components/logout'
+import NewChat from '@/components/new-chat'
 
 export default function Sidebar() {
 	return (
@@ -12,6 +12,7 @@ export default function Sidebar() {
 						{/* model selector */}
 					</div>
 					{/* chatrows */}
+					<ChatList />
 				</div>
 			</div>
 			<LougOut />
