@@ -1,6 +1,7 @@
 import ChatList from '@/components/chat-list'
 import LougOut from '@/components/logout'
 import NewChat from '@/components/new-chat'
+import ModelSelector from '@/components/model-selector'
 
 export default function Sidebar() {
 	return (
@@ -8,10 +9,9 @@ export default function Sidebar() {
 			<div className="flex-1">
 				<div>
 					<NewChat />
-					<div>
-						{/* model selector */}
+					<div className='hidden sm:inline'>
+						<ModelSelector />
 					</div>
-					{/* chatrows */}
 					<ChatList />
 				</div>
 			</div>

@@ -6,6 +6,8 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { useSession } from 'next-auth/react'
 import { FormEvent, useState } from 'react'
 import toast from 'react-hot-toast'
+import ModelSelector from '@/components/model-selector'
+import useSWR from 'swr'
 
 type ChatInputProps = {
 	chatId: string
@@ -14,8 +16,9 @@ export default function ChatInput({ chatId }: ChatInputProps) {
 	const [prompt, setPrompt] = useState('')
 	const { data: session } = useSession()
 
-	// use SWR to get model
-	const model = 'text-davinci-003'
+	const { data: model } = useSWR('model', {
+		fallbackData: 'text-davinci-003'
+	})
 
 	const submit = async (e: FormEvent<HTMLFormElement>) => {
 		if (!session?.user?.email) return null
@@ -54,7 +57,6 @@ export default function ChatInput({ chatId }: ChatInputProps) {
 				session,
 			})
 		})
-		console.log({ result })
 		if (result.ok) {
 			toast.dismiss(notification)
 			toast.success('The AI answered!', { id: notification })
@@ -83,8 +85,8 @@ export default function ChatInput({ chatId }: ChatInputProps) {
 				</button>
 			</form>
 
-			<div>
-				{/* model selection */}
+			<div className='md:hidden'>
+				<ModelSelector />
 			</div>
 		</div>
 	)
