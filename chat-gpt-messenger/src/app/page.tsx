@@ -1,3 +1,4 @@
+import Examples from '@/components/examples'
 import { BoltIcon, ExclamationTriangleIcon, SunIcon } from '@heroicons/react/24/outline'
 
 export default function Home() {
@@ -13,9 +14,7 @@ export default function Home() {
 						<h2>Examples</h2>
 					</div>
 					<div className="space-y-2">
-						<p className="infoText">"Explain something to me"</p>
-						<p className="infoText">"What is a Rickroll?"</p>
-						<p className="infoText">"Is the universe flat and what does it mean?"</p>
+						<Examples />
 					</div>
 				</div>
 				<div>

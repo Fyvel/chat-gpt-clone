@@ -14,7 +14,6 @@ export const query = async (request: CreateCompletionRequest) => {
 			frequency_penalty: request.frequency_penalty || 0,
 			presence_penalty: request.presence_penalty || 0,
 		})
-		console.log(response.status, response.statusText)
 		return response.data?.choices[0]?.text || couldNotRespond
 	} catch (error: unknown) {
 		return error instanceof Error

@@ -1,18 +1,13 @@
 'use client'
 
-import { useSession, signOut } from 'next-auth/react'
+import { PowerIcon } from '@heroicons/react/24/solid'
+import { useSession } from 'next-auth/react'
 
 export default function LougOut() {
 	const { data: session } = useSession()
-	return session 
+	return session
 		? (
-			<picture>
-				<img
-					onClick={() => signOut()}
-					className='h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50'
-					src={session.user?.image || ''}
-					alt="User image" />
-			</picture>
+			<PowerIcon className='h-8 w-8 rounded-full cursor-pointer mx-auto mb-2 hover:scale-110' />
 		)
 		: null
 }

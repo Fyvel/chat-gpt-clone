@@ -8,10 +8,10 @@ import ChatRow from '@/components/chat-row'
 
 export default function ChatList() {
 	const { data: session } = useSession()
-	
+
 	if (!session?.user?.email) return null
-	
-	const [chats, loading, error] = useCollection(
+
+	const [chats, loading] = useCollection(
 		session && query(
 			collection(db, 'users', session.user.email, 'chats'),
 			orderBy('createdAt', 'desc')
@@ -19,7 +19,10 @@ export default function ChatList() {
 	)
 
 	return (
-		<div>
+		<div className='flex flex-col space-y-2 my-2'>
+			{loading && (
+				<div className='animate-pulse text-center text-white italic mt-10'>Loading conversations...</div>
+			)}
 			{chats?.docs.map(chat => (
 				<ChatRow key={chat.id} id={chat.id} />
 			))}
