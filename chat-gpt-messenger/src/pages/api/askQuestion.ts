@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 	const message: Message = {
 		speaker: 'AI',
 		message: answer,
-		createdAt: admin.firestore.Timestamp.now(),
+		createdAt: admin.firestore.Timestamp.fromDate(new Date(admin.firestore.Timestamp.now().toDate().getTime() + 500)),
 		user: {
 			_id: 'AI',
 			name: 'ChatGPT',

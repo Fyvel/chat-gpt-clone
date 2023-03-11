@@ -51,15 +51,16 @@ export default function ChatInput({ chatId }: ChatInputProps) {
 				prompt: input,
 				chatId,
 				model,
-				session
+				session,
 			})
 		})
+		console.log({ result })
 		if (result.ok) {
 			toast.dismiss(notification)
-			toast.success('Success!', { id: notification })
+			toast.success('The AI answered!', { id: notification })
 		} else {
 			toast.dismiss(notification)
-			toast.error('Hmmm... I can\'t tell!')
+			toast.error('Hmmm... the AI can\'t tell right now.')
 		}
 	}
 
@@ -76,7 +77,7 @@ export default function ChatInput({ chatId }: ChatInputProps) {
 					placeholder="Ask anything" />
 				<button
 					type="submit"
-					disabled={!prompt}
+					disabled={!prompt || !session}
 					className="bg-[#11a37f] hover:opacity-50 text-white font-bold px-3 py-3 rounded-full cursor-pointer disabled:cursor-none disabled:bg-gray-500">
 					<PaperAirplaneIcon className="h-4 w-4 -rotate-45" />
 				</button>
