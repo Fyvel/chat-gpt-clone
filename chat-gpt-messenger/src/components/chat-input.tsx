@@ -59,10 +59,10 @@ export default function ChatInput({ chatId }: ChatInputProps) {
 		})
 		if (result.ok) {
 			toast.dismiss(notification)
-			toast.success('The AI answered!', { id: notification })
+			toast.success('Here\'s an answer!', { id: notification })
 		} else {
 			toast.dismiss(notification)
-			toast.error('Hmmm... the AI can\'t tell right now.')
+			toast.error('Hmmm... I can\'t tell right now.')
 		}
 	}
 

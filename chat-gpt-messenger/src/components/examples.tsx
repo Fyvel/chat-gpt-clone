@@ -58,14 +58,14 @@ export default function Examples() {
 			})
 			if (result.ok) {
 				toast.dismiss(notification)
-				toast.success('The AI answered!', { id: notification })
+				toast.success('Here\'s an answer!', { id: notification })
 			} else {
 				toast.dismiss(notification)
-				toast.error('Hmmm... the AI can\'t tell right now.')
+				toast.error('Hmmm... I can\'t tell right now.')
 			}
 			router.push(`/chat/${doc.id}`)
 		} catch (error) {
-			toast.error('Hmmm... the AI can\'t tell right now.')
+			toast.error('Hmmm... I can\'t tell right now.')
 		} finally {
 			setIsLoading(false)
 		}

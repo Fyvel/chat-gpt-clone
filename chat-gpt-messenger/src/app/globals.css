@@ -31,4 +31,14 @@ html {
 	.signIn {
 		@apply rounded-lg px-5 py-3 text-3xl flex items-center justify-center space-x-2 hover:bg-gray-700/70 border-white border-4 text-white font-bold transition-all duration-200 ease-out;
 	}
+	.selectControl {
+		@apply mt-2;
+	}
+	.selectControl > div {
+		@apply bg-[#434654] border-[#434654] text-white;
+	}
+	.selectControl div {
+		@apply text-[#11a37f];
+	}
+
 }

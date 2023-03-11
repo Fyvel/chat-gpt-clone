@@ -19,7 +19,6 @@ export default function Chat({ chatId }: ChatProps) {
 		orderBy('createdAt', 'asc')
 	))
 
-
 	return (
 		<div className="flex-1 overflow-y-auto overflow-x-hidden">
 			{messages?.empty && (

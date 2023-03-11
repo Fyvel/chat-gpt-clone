@@ -16,12 +16,8 @@ export default function ModelSelector() {
 		<div className="mt-2">
 			<Select
 				instanceId={useId()}
-				className='mt-2'
+				className='selectControl'
 				menuPosition='fixed'
-				classNames={{
-					control: () => 'bg-[#434654] border-[#434654]',
-					option: () => 'text-black'
-				}}
 				isSearchable
 				isLoading={isLoading}
 				defaultValue={model}
